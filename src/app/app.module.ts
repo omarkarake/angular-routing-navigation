@@ -12,6 +12,7 @@ import { ProductComponent } from './product/product.component';
 import { BillingComponent } from './billing/billing.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SingleProductComponent } from './single-product/single-product.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +22,13 @@ import { SingleProductComponent } from './single-product/single-product.componen
     BillingComponent,
     NotFoundComponent,
     SingleProductComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
-      { path: '', component: AppComponent },
+      { path: '', component: HomeComponent },
       { path: 'product/:id', component: SingleProductComponent }, //should be uptop because it's more specific
       { path: 'product', component: ProductComponent },
       { path: 'billing', component: BillingComponent },
